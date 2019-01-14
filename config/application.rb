@@ -1,5 +1,5 @@
 Jets.application.configure do
-  config.project_name = "demo"
+  config.project_name = "api"
   config.mode = "api"
 
   config.prewarm.enable = true # default is true
@@ -59,4 +59,10 @@ Jets.application.configure do
   # local testing environment you may want to log these messages to 'test.log' file to keep your
   # testing suite output readable.
   # config.logger = Jets::Logger.new($strerr)
+
+  if ENV['CERT_ARN'] && ENV['JETS_ENV_EXTRA'].nil?
+    config.domain.name = "api.demo.rubyonjets.com"
+    config.domain.hosted_zone_name = "demo.rubyonjets.com"
+    config.domain.cert_arn = ENV['CERT_ARN']
+  end
 end
