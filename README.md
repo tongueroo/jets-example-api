@@ -1,5 +1,7 @@
 # API Example Project
 
+[![BoltOps Badge](https://img.boltops.com/boltops/badges/boltops-badge.png)](https://www.boltops.com)
+
 Simple API Example Jets app. It has a [posts_controller.rb](app/controllers/posts_controller.rb) demonstrates a RESTful API.
 
 ## Setup
